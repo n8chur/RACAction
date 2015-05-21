@@ -15,5 +15,4 @@ FOUNDATION_EXPORT double RACActionVersionNumber;
 FOUNDATION_EXPORT const unsigned char RACActionVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <RACAction/PublicHeader.h>
-
-
+#import <RACAction/RACCommand+Action.h>
