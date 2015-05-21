@@ -9,14 +9,24 @@
 /* Begin PBXBuildFile section */
 		D09B0B581B0E66C700AC15A1 /* RACAction.h in Headers */ = {isa = PBXBuildFile; fileRef = D09B0B571B0E66C700AC15A1 /* RACAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D09B0B5E1B0E66C700AC15A1 /* RACAction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0B521B0E66C700AC15A1 /* RACAction.framework */; };
-		D09B0B651B0E66C700AC15A1 /* RACActionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D09B0B641B0E66C700AC15A1 /* RACActionTests.m */; };
 		D09B0B7E1B0E66FF00AC15A1 /* RACAction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0B731B0E66FF00AC15A1 /* RACAction.framework */; };
 		D09B0BAA1B0E681600AC15A1 /* RACAction.h in Headers */ = {isa = PBXBuildFile; fileRef = D09B0B571B0E66C700AC15A1 /* RACAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D09B0BAB1B0E681E00AC15A1 /* RACActionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D09B0B641B0E66C700AC15A1 /* RACActionTests.m */; };
 		D09B0BAD1B0E684B00AC15A1 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BAC1B0E684B00AC15A1 /* ReactiveCocoa.framework */; };
 		D09B0BAF1B0E685500AC15A1 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BAE1B0E685500AC15A1 /* ReactiveCocoa.framework */; };
 		D09B0BB11B0E689800AC15A1 /* ReactiveCocoa.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BAC1B0E684B00AC15A1 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D09B0BB31B0E68E000AC15A1 /* ReactiveCocoa.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BAE1B0E685500AC15A1 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D09B0BB81B0E725C00AC15A1 /* RACAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D09B0BB51B0E725C00AC15A1 /* RACAction.m */; };
+		D09B0BB91B0E725C00AC15A1 /* RACAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D09B0BB51B0E725C00AC15A1 /* RACAction.m */; };
+		D09B0BBC1B0E73EF00AC15A1 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BBA1B0E73EF00AC15A1 /* Expecta.framework */; };
+		D09B0BBD1B0E73EF00AC15A1 /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BBB1B0E73EF00AC15A1 /* Specta.framework */; };
+		D09B0BC01B0E73F800AC15A1 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BBE1B0E73F800AC15A1 /* Expecta.framework */; };
+		D09B0BC11B0E73F800AC15A1 /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BBF1B0E73F800AC15A1 /* Specta.framework */; };
+		D09B0BC21B0E740400AC15A1 /* Expecta.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BBE1B0E73F800AC15A1 /* Expecta.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D09B0BC31B0E740400AC15A1 /* Specta.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BBF1B0E73F800AC15A1 /* Specta.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D09B0BC41B0E740800AC15A1 /* Expecta.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BBA1B0E73EF00AC15A1 /* Expecta.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D09B0BC51B0E740800AC15A1 /* Specta.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BBB1B0E73EF00AC15A1 /* Specta.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D09B0BC71B0E798000AC15A1 /* RACActionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D09B0BC61B0E798000AC15A1 /* RACActionSpec.m */; };
+		D09B0BC81B0E798000AC15A1 /* RACActionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D09B0BC61B0E798000AC15A1 /* RACActionSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +54,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D09B0BB11B0E689800AC15A1 /* ReactiveCocoa.framework in Copy Frameworks */,
+				D09B0BC41B0E740800AC15A1 /* Expecta.framework in Copy Frameworks */,
+				D09B0BC51B0E740800AC15A1 /* Specta.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,6 +67,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D09B0BB31B0E68E000AC15A1 /* ReactiveCocoa.framework in Copy Frameworks */,
+				D09B0BC21B0E740400AC15A1 /* Expecta.framework in Copy Frameworks */,
+				D09B0BC31B0E740400AC15A1 /* Specta.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,7 +81,6 @@
 		D09B0B571B0E66C700AC15A1 /* RACAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACAction.h; sourceTree = "<group>"; };
 		D09B0B5D1B0E66C700AC15A1 /* RACAction-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RACAction-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09B0B631B0E66C700AC15A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D09B0B641B0E66C700AC15A1 /* RACActionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACActionTests.m; sourceTree = "<group>"; };
 		D09B0B731B0E66FF00AC15A1 /* RACAction.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RACAction.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09B0B7D1B0E66FF00AC15A1 /* RACAction-MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RACAction-MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09B0B8E1B0E676C00AC15A1 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
@@ -92,6 +105,12 @@
 		D09B0BA91B0E676C00AC15A1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D09B0BAC1B0E684B00AC15A1 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = SOURCE_ROOT; };
 		D09B0BAE1B0E685500AC15A1 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/Mac/ReactiveCocoa.framework; sourceTree = SOURCE_ROOT; };
+		D09B0BB51B0E725C00AC15A1 /* RACAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACAction.m; sourceTree = "<group>"; };
+		D09B0BBA1B0E73EF00AC15A1 /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/iOS/Expecta.framework; sourceTree = SOURCE_ROOT; };
+		D09B0BBB1B0E73EF00AC15A1 /* Specta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Specta.framework; path = Carthage/Build/iOS/Specta.framework; sourceTree = SOURCE_ROOT; };
+		D09B0BBE1B0E73F800AC15A1 /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/Mac/Expecta.framework; sourceTree = SOURCE_ROOT; };
+		D09B0BBF1B0E73F800AC15A1 /* Specta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Specta.framework; path = Carthage/Build/Mac/Specta.framework; sourceTree = SOURCE_ROOT; };
+		D09B0BC61B0E798000AC15A1 /* RACActionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACActionSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +127,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D09B0B5E1B0E66C700AC15A1 /* RACAction.framework in Frameworks */,
+				D09B0BBD1B0E73EF00AC15A1 /* Specta.framework in Frameworks */,
+				D09B0BBC1B0E73EF00AC15A1 /* Expecta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D09B0B7E1B0E66FF00AC15A1 /* RACAction.framework in Frameworks */,
+				D09B0BC11B0E73F800AC15A1 /* Specta.framework in Frameworks */,
+				D09B0BC01B0E73F800AC15A1 /* Expecta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				D09B0B571B0E66C700AC15A1 /* RACAction.h */,
+				D09B0BB51B0E725C00AC15A1 /* RACAction.m */,
 				D09B0B551B0E66C700AC15A1 /* Supporting Files */,
 			);
 			path = RACAction;
@@ -173,7 +197,7 @@
 		D09B0B611B0E66C700AC15A1 /* RACActionTests */ = {
 			isa = PBXGroup;
 			children = (
-				D09B0B641B0E66C700AC15A1 /* RACActionTests.m */,
+				D09B0BC61B0E798000AC15A1 /* RACActionSpec.m */,
 				D09B0B621B0E66C700AC15A1 /* Supporting Files */,
 			);
 			path = RACActionTests;
@@ -182,6 +206,10 @@
 		D09B0B621B0E66C700AC15A1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D09B0BBA1B0E73EF00AC15A1 /* Expecta.framework */,
+				D09B0BBB1B0E73EF00AC15A1 /* Specta.framework */,
+				D09B0BBE1B0E73F800AC15A1 /* Expecta.framework */,
+				D09B0BBF1B0E73F800AC15A1 /* Specta.framework */,
 				D09B0B631B0E66C700AC15A1 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -462,6 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09B0BB81B0E725C00AC15A1 /* RACAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,7 +498,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D09B0B651B0E66C700AC15A1 /* RACActionTests.m in Sources */,
+				D09B0BC71B0E798000AC15A1 /* RACActionSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +506,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09B0BB91B0E725C00AC15A1 /* RACAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,7 +514,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D09B0BAB1B0E681E00AC15A1 /* RACActionTests.m in Sources */,
+				D09B0BC81B0E798000AC15A1 /* RACActionSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
