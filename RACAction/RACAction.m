@@ -10,24 +10,41 @@
 
 @implementation RACAction
 
+- (instancetype)initWithEnabled:(RACSignal *)enabledSignal signalBlock:(RACSignal * (^)(id input))signalBlock {
+    self = [super initWithEnabled:enabledSignal signalBlock:signalBlock];
+    if (self == nil) return nil;
+
+    _act_latestExecution = [[[[self.act_executions
+        replayLast]
+        take:1]
+        flatten]
+        setNameWithFormat:@"%@ -act_latestExecution", self];
+
+    return self;
+}
+
 - (RACSignal *)act_executions {
-    NSAssert(!super.allowsConcurrentExecution, @"%s is only supported for serial commands, %@ has concurrent execution enabled", sel_getName(_cmd), self);
+    NSAssert(!super.allowsConcurrentExecution, @"%s is only supported for serial actions, %@ has concurrent execution enabled", sel_getName(_cmd), self);
 
     RACSignal *errors = self.errors;
 
-    return [super.executionSignals map:^(RACSignal *execution) {
-        RACSignal *doneExecuting = [execution ignoreValues];
+    return [[super.executionSignals
+        map:^(RACSignal *execution) {
+            RACSignal *doneExecuting = [execution ignoreValues];
 
-        return [RACSignal
-            merge:@[
-                execution,
-                [errors takeUntil:doneExecuting],
-            ]];
-    }];
+            return [RACSignal
+                merge:@[
+                    execution,
+                    [errors takeUntil:doneExecuting],
+                ]];
+        }]
+        setNameWithFormat:@"%@ -act_executions", self];
 }
 
 - (RACSignal *)act_values {
-    return [super.executionSignals concat];
+    return [[super.executionSignals
+        concat]
+        setNameWithFormat:@"%@ -act_values", self];
 }
 
 #pragma mark - RACCommand

@@ -29,6 +29,16 @@ FOUNDATION_EXPORT const unsigned char RACActionVersionString[];
 /// deallocated.
 @property (nonatomic, strong, readonly) RACSignal *act_values;
 
+/// Replays the latest inner signal sent upon -act_executions.
+///
+/// Different subscriptions to this signal may connect to different executions
+/// of the action.
+///
+/// Returns a signal that, upon subscription, will replay events from the
+/// current execution so far, then forward any future events, or else the
+/// previous execution if the action is not currently executing.
+@property (nonatomic, strong, readonly) RACSignal *act_latestExecution;
+
 @property (atomic, assign) BOOL allowsConcurrentExecution __attribute__((unavailable("RACActions are required to be serial")));
 @property (nonatomic, strong, readonly) RACSignal *executionSignals __attribute__((unavailable("Use -act_executions instead")));
 
