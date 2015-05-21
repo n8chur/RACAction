@@ -1,21 +1,21 @@
 //
-//  RACCommand+Action.m
+//  RACAction.m
 //  RACAction
 //
 //  Created by Justin Spahr-Summers on 2015-05-21.
 //  Copyright (c) 2015 Automatic. All rights reserved.
 //
 
-#import "RACCommand+Action.h"
+#import "RACAction.h"
 
-@implementation RACCommand (Action)
+@implementation RACAction
 
 - (RACSignal *)act_executions {
-    NSAssert(!self.allowsConcurrentExecution, @"%s is only supported for serial commands, %@ has concurrent execution enabled", sel_getName(_cmd), self);
+    NSAssert(!super.allowsConcurrentExecution, @"%s is only supported for serial commands, %@ has concurrent execution enabled", sel_getName(_cmd), self);
 
     RACSignal *errors = self.errors;
 
-    return [self.executionSignals map:^(RACSignal *execution) {
+    return [super.executionSignals map:^(RACSignal *execution) {
         RACSignal *doneExecuting = [execution ignoreValues];
 
         return [RACSignal
@@ -27,7 +27,12 @@
 }
 
 - (RACSignal *)act_values {
-    return [self.executionSignals concat];
+    return [super.executionSignals concat];
 }
+
+#pragma mark - RACCommand
+
+@dynamic allowsConcurrentExecution;
+@dynamic executionSignals;
 
 @end

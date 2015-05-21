@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Automatic. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import ReactiveCocoa;
 
 //! Project version number for RACAction.
 FOUNDATION_EXPORT double RACActionVersionNumber;
@@ -14,5 +14,22 @@ FOUNDATION_EXPORT double RACActionVersionNumber;
 //! Project version string for RACAction.
 FOUNDATION_EXPORT const unsigned char RACActionVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <RACAction/PublicHeader.h>
-#import <RACAction/RACCommand+Action.h>
+/// Extends RACCommand with methods like those of Action from the RAC 3.0 Swift
+/// API.
+@interface RACAction : RACCommand
+
+/// A signal of inner signals representing each execution of this action.
+///
+/// Unlike -[RACCommand executionSignals], the inner signals here may error out.
+@property (nonatomic, strong, readonly) RACSignal *act_executions;
+
+/// The values sent by all executions of this action.
+///
+/// This signal will never error, and will complete when the action is
+/// deallocated.
+@property (nonatomic, strong, readonly) RACSignal *act_values;
+
+@property (atomic, assign) BOOL allowsConcurrentExecution __attribute__((unavailable("RACActions are required to be serial")));
+@property (nonatomic, strong, readonly) RACSignal *executionSignals __attribute__((unavailable("Use -act_executions instead")));
+
+@end
