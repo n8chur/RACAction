@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D09B0B581B0E66C700AC15A1 /* RACAction.h in Headers */ = {isa = PBXBuildFile; fileRef = D09B0B571B0E66C700AC15A1 /* RACAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D09B0B5E1B0E66C700AC15A1 /* RACAction-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0B521B0E66C700AC15A1 /* RACAction-iOS.framework */; };
+		D09B0B5E1B0E66C700AC15A1 /* RACAction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0B521B0E66C700AC15A1 /* RACAction.framework */; };
 		D09B0B651B0E66C700AC15A1 /* RACActionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D09B0B641B0E66C700AC15A1 /* RACActionTests.m */; };
-		D09B0B7E1B0E66FF00AC15A1 /* RACAction-Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0B731B0E66FF00AC15A1 /* RACAction-Mac.framework */; };
+		D09B0B7E1B0E66FF00AC15A1 /* RACAction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0B731B0E66FF00AC15A1 /* RACAction.framework */; };
+		D09B0BAA1B0E681600AC15A1 /* RACAction.h in Headers */ = {isa = PBXBuildFile; fileRef = D09B0B571B0E66C700AC15A1 /* RACAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D09B0BAB1B0E681E00AC15A1 /* RACActionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D09B0B641B0E66C700AC15A1 /* RACActionTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,14 +33,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D09B0B521B0E66C700AC15A1 /* RACAction-iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "RACAction-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D09B0B521B0E66C700AC15A1 /* RACAction.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RACAction.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09B0B561B0E66C700AC15A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D09B0B571B0E66C700AC15A1 /* RACAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACAction.h; sourceTree = "<group>"; };
-		D09B0B5D1B0E66C700AC15A1 /* RACActionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RACActionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D09B0B5D1B0E66C700AC15A1 /* RACAction-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RACAction-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09B0B631B0E66C700AC15A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D09B0B641B0E66C700AC15A1 /* RACActionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACActionTests.m; sourceTree = "<group>"; };
-		D09B0B731B0E66FF00AC15A1 /* RACAction-Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "RACAction-Mac.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D09B0B7D1B0E66FF00AC15A1 /* RACActionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RACActionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D09B0B731B0E66FF00AC15A1 /* RACAction.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RACAction.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D09B0B7D1B0E66FF00AC15A1 /* RACAction-MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RACAction-MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D09B0B8E1B0E676C00AC15A1 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		D09B0B901B0E676C00AC15A1 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		D09B0B911B0E676C00AC15A1 /* Profile.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Profile.xcconfig; sourceTree = "<group>"; };
+		D09B0B921B0E676C00AC15A1 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		D09B0B931B0E676C00AC15A1 /* Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Test.xcconfig; sourceTree = "<group>"; };
+		D09B0B951B0E676C00AC15A1 /* Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Application.xcconfig; sourceTree = "<group>"; };
+		D09B0B961B0E676C00AC15A1 /* Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Framework.xcconfig; sourceTree = "<group>"; };
+		D09B0B971B0E676C00AC15A1 /* StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = StaticLibrary.xcconfig; sourceTree = "<group>"; };
+		D09B0B9B1B0E676C00AC15A1 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveCocoa.framework; sourceTree = "<group>"; };
+		D09B0B9D1B0E676C00AC15A1 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveCocoa.framework; sourceTree = "<group>"; };
+		D09B0B9F1B0E676C00AC15A1 /* iOS-Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Application.xcconfig"; sourceTree = "<group>"; };
+		D09B0BA01B0E676C00AC15A1 /* iOS-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Base.xcconfig"; sourceTree = "<group>"; };
+		D09B0BA11B0E676C00AC15A1 /* iOS-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Framework.xcconfig"; sourceTree = "<group>"; };
+		D09B0BA21B0E676C00AC15A1 /* iOS-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
+		D09B0BA41B0E676C00AC15A1 /* Mac-Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Application.xcconfig"; sourceTree = "<group>"; };
+		D09B0BA51B0E676C00AC15A1 /* Mac-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Base.xcconfig"; sourceTree = "<group>"; };
+		D09B0BA61B0E676C00AC15A1 /* Mac-DynamicLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-DynamicLibrary.xcconfig"; sourceTree = "<group>"; };
+		D09B0BA71B0E676C00AC15A1 /* Mac-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Framework.xcconfig"; sourceTree = "<group>"; };
+		D09B0BA81B0E676C00AC15A1 /* Mac-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
+		D09B0BA91B0E676C00AC15A1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D09B0B5E1B0E66C700AC15A1 /* RACAction-iOS.framework in Frameworks */,
+				D09B0B5E1B0E66C700AC15A1 /* RACAction.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D09B0B7E1B0E66FF00AC15A1 /* RACAction-Mac.framework in Frameworks */,
+				D09B0B7E1B0E66FF00AC15A1 /* RACAction.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +102,7 @@
 			children = (
 				D09B0B541B0E66C700AC15A1 /* RACAction */,
 				D09B0B611B0E66C700AC15A1 /* RACActionTests */,
+				D09B0B8C1B0E676C00AC15A1 /* Configuration */,
 				D09B0B531B0E66C700AC15A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,10 +110,10 @@
 		D09B0B531B0E66C700AC15A1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D09B0B521B0E66C700AC15A1 /* RACAction-iOS.framework */,
-				D09B0B5D1B0E66C700AC15A1 /* RACActionTests.xctest */,
-				D09B0B731B0E66FF00AC15A1 /* RACAction-Mac.framework */,
-				D09B0B7D1B0E66FF00AC15A1 /* RACActionTests.xctest */,
+				D09B0B521B0E66C700AC15A1 /* RACAction.framework */,
+				D09B0B5D1B0E66C700AC15A1 /* RACAction-iOSTests.xctest */,
+				D09B0B731B0E66FF00AC15A1 /* RACAction.framework */,
+				D09B0B7D1B0E66FF00AC15A1 /* RACAction-MacTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,6 +152,106 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D09B0B8C1B0E676C00AC15A1 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				D09B0B8D1B0E676C00AC15A1 /* Base */,
+				D09B0B981B0E676C00AC15A1 /* Carthage */,
+				D09B0B9E1B0E676C00AC15A1 /* iOS */,
+				D09B0BA31B0E676C00AC15A1 /* Mac OS X */,
+				D09B0BA91B0E676C00AC15A1 /* README.md */,
+			);
+			name = Configuration;
+			path = Carthage/Checkouts/xcconfigs;
+			sourceTree = "<group>";
+		};
+		D09B0B8D1B0E676C00AC15A1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D09B0B8E1B0E676C00AC15A1 /* Common.xcconfig */,
+				D09B0B8F1B0E676C00AC15A1 /* Configurations */,
+				D09B0B941B0E676C00AC15A1 /* Targets */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D09B0B8F1B0E676C00AC15A1 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				D09B0B901B0E676C00AC15A1 /* Debug.xcconfig */,
+				D09B0B911B0E676C00AC15A1 /* Profile.xcconfig */,
+				D09B0B921B0E676C00AC15A1 /* Release.xcconfig */,
+				D09B0B931B0E676C00AC15A1 /* Test.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		D09B0B941B0E676C00AC15A1 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				D09B0B951B0E676C00AC15A1 /* Application.xcconfig */,
+				D09B0B961B0E676C00AC15A1 /* Framework.xcconfig */,
+				D09B0B971B0E676C00AC15A1 /* StaticLibrary.xcconfig */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		D09B0B981B0E676C00AC15A1 /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				D09B0B991B0E676C00AC15A1 /* Build */,
+			);
+			path = Carthage;
+			sourceTree = "<group>";
+		};
+		D09B0B991B0E676C00AC15A1 /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				D09B0B9A1B0E676C00AC15A1 /* iOS */,
+				D09B0B9C1B0E676C00AC15A1 /* Mac */,
+			);
+			path = Build;
+			sourceTree = "<group>";
+		};
+		D09B0B9A1B0E676C00AC15A1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D09B0B9B1B0E676C00AC15A1 /* ReactiveCocoa.framework */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		D09B0B9C1B0E676C00AC15A1 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				D09B0B9D1B0E676C00AC15A1 /* ReactiveCocoa.framework */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
+		D09B0B9E1B0E676C00AC15A1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D09B0B9F1B0E676C00AC15A1 /* iOS-Application.xcconfig */,
+				D09B0BA01B0E676C00AC15A1 /* iOS-Base.xcconfig */,
+				D09B0BA11B0E676C00AC15A1 /* iOS-Framework.xcconfig */,
+				D09B0BA21B0E676C00AC15A1 /* iOS-StaticLibrary.xcconfig */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		D09B0BA31B0E676C00AC15A1 /* Mac OS X */ = {
+			isa = PBXGroup;
+			children = (
+				D09B0BA41B0E676C00AC15A1 /* Mac-Application.xcconfig */,
+				D09B0BA51B0E676C00AC15A1 /* Mac-Base.xcconfig */,
+				D09B0BA61B0E676C00AC15A1 /* Mac-DynamicLibrary.xcconfig */,
+				D09B0BA71B0E676C00AC15A1 /* Mac-Framework.xcconfig */,
+				D09B0BA81B0E676C00AC15A1 /* Mac-StaticLibrary.xcconfig */,
+			);
+			path = "Mac OS X";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -144,6 +267,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09B0BAA1B0E681600AC15A1 /* RACAction.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +289,7 @@
 			);
 			name = "RACAction-iOS";
 			productName = RACAction;
-			productReference = D09B0B521B0E66C700AC15A1 /* RACAction-iOS.framework */;
+			productReference = D09B0B521B0E66C700AC15A1 /* RACAction.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D09B0B5C1B0E66C700AC15A1 /* RACAction-iOSTests */ = {
@@ -183,7 +307,7 @@
 			);
 			name = "RACAction-iOSTests";
 			productName = RACActionTests;
-			productReference = D09B0B5D1B0E66C700AC15A1 /* RACActionTests.xctest */;
+			productReference = D09B0B5D1B0E66C700AC15A1 /* RACAction-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		D09B0B721B0E66FF00AC15A1 /* RACAction-Mac */ = {
@@ -201,7 +325,7 @@
 			);
 			name = "RACAction-Mac";
 			productName = RACAction;
-			productReference = D09B0B731B0E66FF00AC15A1 /* RACAction-Mac.framework */;
+			productReference = D09B0B731B0E66FF00AC15A1 /* RACAction.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D09B0B7C1B0E66FF00AC15A1 /* RACAction-MacTests */ = {
@@ -219,7 +343,7 @@
 			);
 			name = "RACAction-MacTests";
 			productName = RACActionTests;
-			productReference = D09B0B7D1B0E66FF00AC15A1 /* RACActionTests.xctest */;
+			productReference = D09B0B7D1B0E66FF00AC15A1 /* RACAction-MacTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -323,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09B0BAB1B0E681E00AC15A1 /* RACActionTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,45 +469,11 @@
 /* Begin XCBuildConfiguration section */
 		D09B0B661B0E66C700AC15A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D09B0B901B0E676C00AC15A1 /* Debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -391,40 +482,12 @@
 		};
 		D09B0B671B0E66C700AC15A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D09B0B921B0E676C00AC15A1 /* Release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -432,141 +495,95 @@
 		};
 		D09B0B691B0E66C700AC15A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D09B0BA11B0E676C00AC15A1 /* iOS-Framework.xcconfig */;
 			buildSettings = {
-				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RACAction/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
 		D09B0B6A1B0E66C700AC15A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D09B0BA11B0E676C00AC15A1 /* iOS-Framework.xcconfig */;
 			buildSettings = {
-				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RACAction/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
 		D09B0B6C1B0E66C700AC15A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D09B0B9F1B0E676C00AC15A1 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = RACActionTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		D09B0B6D1B0E66C700AC15A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D09B0B9F1B0E676C00AC15A1 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = RACActionTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 		D09B0B871B0E66FF00AC15A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D09B0BA71B0E676C00AC15A1 /* Mac-Framework.xcconfig */;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = RACAction/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
 		D09B0B881B0E66FF00AC15A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D09B0BA71B0E676C00AC15A1 /* Mac-Framework.xcconfig */;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = RACAction/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
 		D09B0B8A1B0E66FF00AC15A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D09B0BA41B0E676C00AC15A1 /* Mac-Application.xcconfig */;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = RACActionTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		D09B0B8B1B0E66FF00AC15A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D09B0BA41B0E676C00AC15A1 /* Mac-Application.xcconfig */;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = RACActionTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -607,6 +624,7 @@
 				D09B0B881B0E66FF00AC15A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D09B0B891B0E66FF00AC15A1 /* Build configuration list for PBXNativeTarget "RACAction-MacTests" */ = {
 			isa = XCConfigurationList;
@@ -615,6 +633,7 @@
 				D09B0B8B1B0E66FF00AC15A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

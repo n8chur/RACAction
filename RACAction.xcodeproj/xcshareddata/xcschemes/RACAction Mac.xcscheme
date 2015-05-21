@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D09B0B721B0E66FF00AC15A1"
-               BuildableName = "RACAction-Mac.framework"
+               BuildableName = "RACAction.framework"
                BlueprintName = "RACAction-Mac"
                ReferencedContainer = "container:RACAction.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D09B0B721B0E66FF00AC15A1"
-            BuildableName = "RACAction-Mac.framework"
+            BuildableName = "RACAction.framework"
             BlueprintName = "RACAction-Mac"
             ReferencedContainer = "container:RACAction.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D09B0B721B0E66FF00AC15A1"
-            BuildableName = "RACAction-Mac.framework"
+            BuildableName = "RACAction.framework"
             BlueprintName = "RACAction-Mac"
             ReferencedContainer = "container:RACAction.xcodeproj">
          </BuildableReference>
@@ -94,7 +94,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D09B0B721B0E66FF00AC15A1"
-            BuildableName = "RACAction-Mac.framework"
+            BuildableName = "RACAction.framework"
             BlueprintName = "RACAction-Mac"
             ReferencedContainer = "container:RACAction.xcodeproj">
          </BuildableReference>
