@@ -29,7 +29,8 @@ FOUNDATION_EXPORT const unsigned char RACActionVersionString[];
 /// deallocated.
 @property (nonatomic, strong, readonly) RACSignal *act_values;
 
-/// Replays the latest inner signal sent upon -act_executions.
+/// Replays the latest inner signal sent upon -act_executions, including any
+/// error or completed event.
 ///
 /// Different subscriptions to this signal may connect to different executions
 /// of the action.
