@@ -13,6 +13,10 @@
 		D09B0B7E1B0E66FF00AC15A1 /* RACAction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0B731B0E66FF00AC15A1 /* RACAction.framework */; };
 		D09B0BAA1B0E681600AC15A1 /* RACAction.h in Headers */ = {isa = PBXBuildFile; fileRef = D09B0B571B0E66C700AC15A1 /* RACAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D09B0BAB1B0E681E00AC15A1 /* RACActionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D09B0B641B0E66C700AC15A1 /* RACActionTests.m */; };
+		D09B0BAD1B0E684B00AC15A1 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BAC1B0E684B00AC15A1 /* ReactiveCocoa.framework */; };
+		D09B0BAF1B0E685500AC15A1 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BAE1B0E685500AC15A1 /* ReactiveCocoa.framework */; };
+		D09B0BB11B0E689800AC15A1 /* ReactiveCocoa.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BAC1B0E684B00AC15A1 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D09B0BB31B0E68E000AC15A1 /* ReactiveCocoa.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BAE1B0E685500AC15A1 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +35,31 @@
 			remoteInfo = RACAction;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D09B0BB01B0E689000AC15A1 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D09B0BB11B0E689800AC15A1 /* ReactiveCocoa.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D09B0BB21B0E68D900AC15A1 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D09B0BB31B0E68E000AC15A1 /* ReactiveCocoa.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D09B0B521B0E66C700AC15A1 /* RACAction.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RACAction.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +90,8 @@
 		D09B0BA71B0E676C00AC15A1 /* Mac-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Framework.xcconfig"; sourceTree = "<group>"; };
 		D09B0BA81B0E676C00AC15A1 /* Mac-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
 		D09B0BA91B0E676C00AC15A1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D09B0BAC1B0E684B00AC15A1 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = SOURCE_ROOT; };
+		D09B0BAE1B0E685500AC15A1 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/Mac/ReactiveCocoa.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09B0BAD1B0E684B00AC15A1 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09B0BAF1B0E685500AC15A1 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +163,8 @@
 		D09B0B551B0E66C700AC15A1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D09B0BAC1B0E684B00AC15A1 /* ReactiveCocoa.framework */,
+				D09B0BAE1B0E685500AC15A1 /* ReactiveCocoa.framework */,
 				D09B0B561B0E66C700AC15A1 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -299,6 +334,7 @@
 				D09B0B591B0E66C700AC15A1 /* Sources */,
 				D09B0B5A1B0E66C700AC15A1 /* Frameworks */,
 				D09B0B5B1B0E66C700AC15A1 /* Resources */,
+				D09B0BB01B0E689000AC15A1 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -335,6 +371,7 @@
 				D09B0B791B0E66FF00AC15A1 /* Sources */,
 				D09B0B7A1B0E66FF00AC15A1 /* Frameworks */,
 				D09B0B7B1B0E66FF00AC15A1 /* Resources */,
+				D09B0BB21B0E68D900AC15A1 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -499,6 +536,10 @@
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					Carthage/Build/iOS,
+				);
 				INFOPLIST_FILE = RACAction/Info.plist;
 			};
 			name = Debug;
@@ -509,6 +550,10 @@
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					Carthage/Build/iOS,
+				);
 				INFOPLIST_FILE = RACAction/Info.plist;
 			};
 			name = Release;
@@ -520,6 +565,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					Carthage/Build/iOS,
 				);
 				INFOPLIST_FILE = RACActionTests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -533,6 +579,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					Carthage/Build/iOS,
 				);
 				INFOPLIST_FILE = RACActionTests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -545,6 +592,10 @@
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					Carthage/Build/Mac,
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = RACAction/Info.plist;
 			};
@@ -556,6 +607,10 @@
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					Carthage/Build/Mac,
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = RACAction/Info.plist;
 			};
@@ -568,6 +623,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					Carthage/Build/Mac,
 				);
 				INFOPLIST_FILE = RACActionTests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -581,6 +637,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					Carthage/Build/Mac,
 				);
 				INFOPLIST_FILE = RACActionTests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
