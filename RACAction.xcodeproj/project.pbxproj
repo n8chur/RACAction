@@ -21,6 +21,14 @@
 		D09B0BB71B0E725C00AC15A1 /* RACCommand+Action.h in Headers */ = {isa = PBXBuildFile; fileRef = D09B0BB41B0E725C00AC15A1 /* RACCommand+Action.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D09B0BB81B0E725C00AC15A1 /* RACCommand+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = D09B0BB51B0E725C00AC15A1 /* RACCommand+Action.m */; };
 		D09B0BB91B0E725C00AC15A1 /* RACCommand+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = D09B0BB51B0E725C00AC15A1 /* RACCommand+Action.m */; };
+		D09B0BBC1B0E73EF00AC15A1 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BBA1B0E73EF00AC15A1 /* Expecta.framework */; };
+		D09B0BBD1B0E73EF00AC15A1 /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BBB1B0E73EF00AC15A1 /* Specta.framework */; };
+		D09B0BC01B0E73F800AC15A1 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BBE1B0E73F800AC15A1 /* Expecta.framework */; };
+		D09B0BC11B0E73F800AC15A1 /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BBF1B0E73F800AC15A1 /* Specta.framework */; };
+		D09B0BC21B0E740400AC15A1 /* Expecta.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BBE1B0E73F800AC15A1 /* Expecta.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D09B0BC31B0E740400AC15A1 /* Specta.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BBF1B0E73F800AC15A1 /* Specta.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D09B0BC41B0E740800AC15A1 /* Expecta.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BBA1B0E73EF00AC15A1 /* Expecta.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D09B0BC51B0E740800AC15A1 /* Specta.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BBB1B0E73EF00AC15A1 /* Specta.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +56,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D09B0BB11B0E689800AC15A1 /* ReactiveCocoa.framework in Copy Frameworks */,
+				D09B0BC41B0E740800AC15A1 /* Expecta.framework in Copy Frameworks */,
+				D09B0BC51B0E740800AC15A1 /* Specta.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +69,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D09B0BB31B0E68E000AC15A1 /* ReactiveCocoa.framework in Copy Frameworks */,
+				D09B0BC21B0E740400AC15A1 /* Expecta.framework in Copy Frameworks */,
+				D09B0BC31B0E740400AC15A1 /* Specta.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +110,10 @@
 		D09B0BAE1B0E685500AC15A1 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/Mac/ReactiveCocoa.framework; sourceTree = SOURCE_ROOT; };
 		D09B0BB41B0E725C00AC15A1 /* RACCommand+Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACCommand+Action.h"; sourceTree = "<group>"; };
 		D09B0BB51B0E725C00AC15A1 /* RACCommand+Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACCommand+Action.m"; sourceTree = "<group>"; };
+		D09B0BBA1B0E73EF00AC15A1 /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/iOS/Expecta.framework; sourceTree = SOURCE_ROOT; };
+		D09B0BBB1B0E73EF00AC15A1 /* Specta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Specta.framework; path = Carthage/Build/iOS/Specta.framework; sourceTree = SOURCE_ROOT; };
+		D09B0BBE1B0E73F800AC15A1 /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/Mac/Expecta.framework; sourceTree = SOURCE_ROOT; };
+		D09B0BBF1B0E73F800AC15A1 /* Specta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Specta.framework; path = Carthage/Build/Mac/Specta.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +130,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D09B0B5E1B0E66C700AC15A1 /* RACAction.framework in Frameworks */,
+				D09B0BBD1B0E73EF00AC15A1 /* Specta.framework in Frameworks */,
+				D09B0BBC1B0E73EF00AC15A1 /* Expecta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +148,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D09B0B7E1B0E66FF00AC15A1 /* RACAction.framework in Frameworks */,
+				D09B0BC11B0E73F800AC15A1 /* Specta.framework in Frameworks */,
+				D09B0BC01B0E73F800AC15A1 /* Expecta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +210,10 @@
 		D09B0B621B0E66C700AC15A1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D09B0BBA1B0E73EF00AC15A1 /* Expecta.framework */,
+				D09B0BBB1B0E73EF00AC15A1 /* Specta.framework */,
+				D09B0BBE1B0E73F800AC15A1 /* Expecta.framework */,
+				D09B0BBF1B0E73F800AC15A1 /* Specta.framework */,
 				D09B0B631B0E66C700AC15A1 /* Info.plist */,
 			);
 			name = "Supporting Files";
