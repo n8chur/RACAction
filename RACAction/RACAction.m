@@ -26,17 +26,22 @@
 - (RACSignal *)act_executions {
     NSAssert(!super.allowsConcurrentExecution, @"RACActions are required to be serial, but %@ has concurreny enabled", self);
 
-    RACSignal *errors = self.errors;
+    RACSignal *errors = [self.errors flattenMap:^(NSError *error) {
+        return [RACSignal error:error];
+    }];
+
+    RACSignal *doneExecuting = [self.executing filter:^ BOOL (NSNumber *executing) {
+        return !executing.boolValue;
+    }];
 
     return [[super.executionSignals
         map:^(RACSignal *execution) {
-            RACSignal *doneExecuting = [execution ignoreValues];
-
-            return [RACSignal
+            return [[RACSignal
                 merge:@[
                     execution,
                     [errors takeUntil:doneExecuting],
-                ]];
+                ]]
+                replay];
         }]
         setNameWithFormat:@"%@ -act_executions", self];
 }
