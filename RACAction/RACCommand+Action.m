@@ -10,4 +10,24 @@
 
 @implementation RACCommand (Action)
 
+- (RACSignal *)act_executions {
+    NSAssert(!self.allowsConcurrentExecution, @"%s is only supported for serial commands, %@ has concurrent execution enabled", sel_getName(_cmd), self);
+
+    RACSignal *errors = self.errors;
+
+    return [self.executionSignals map:^(RACSignal *execution) {
+        RACSignal *doneExecuting = [execution ignoreValues];
+
+        return [RACSignal
+            merge:@[
+                execution,
+                [errors takeUntil:doneExecuting],
+            ]];
+    }];
+}
+
+- (RACSignal *)act_values {
+    return [self.executionSignals concat];
+}
+
 @end
