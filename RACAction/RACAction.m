@@ -24,7 +24,7 @@
 }
 
 - (RACSignal *)act_executions {
-    NSAssert(!super.allowsConcurrentExecution, @"%s is only supported for serial actions, %@ has concurrent execution enabled", sel_getName(_cmd), self);
+    NSAssert(!super.allowsConcurrentExecution, @"RACActions are required to be serial, but %@ has concurreny enabled", self);
 
     RACSignal *errors = self.errors;
 
