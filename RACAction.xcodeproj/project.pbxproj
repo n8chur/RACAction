@@ -564,7 +564,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D09B0BA11B0E676C00AC15A1 /* iOS-Framework.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -579,7 +579,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D09B0BA11B0E676C00AC15A1 /* iOS-Framework.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
