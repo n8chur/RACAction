@@ -10,19 +10,6 @@
 
 @implementation RACAction
 
-- (instancetype)initWithEnabled:(RACSignal *)enabledSignal signalBlock:(RACSignal * (^)(id input))signalBlock {
-    self = [super initWithEnabled:enabledSignal signalBlock:signalBlock];
-    if (self == nil) return nil;
-
-    _act_latestExecution = [[[[self.act_executions
-        replayLast]
-        take:1]
-        flatten]
-        setNameWithFormat:@"%@ -act_latestExecution", self];
-
-    return self;
-}
-
 - (RACSignal *)act_executions {
     NSAssert(!super.allowsConcurrentExecution, @"RACActions are required to be serial, but %@ has concurreny enabled", self);
 
@@ -50,6 +37,14 @@
     return [[super.executionSignals
         concat]
         setNameWithFormat:@"%@ -act_values", self];
+}
+
+- (RACSignal *)act_latestExecution {
+    return [[[[self.act_executions
+        replayLast]
+        take:1]
+        flatten]
+        setNameWithFormat:@"%@ -act_latestExecution", self];
 }
 
 #pragma mark - RACCommand

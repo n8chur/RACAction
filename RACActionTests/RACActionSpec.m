@@ -74,6 +74,30 @@ describe(@"-act_values", ^{
         expect([[action execute:@2] asynchronouslyWaitUntilCompleted:NULL]).to.beTruthy();
         expect(values).to.equal((@[ @2, @4 ]));
     });
+
+    describe(@"disposal", ^{
+        beforeEach(^{
+            action = [[RACAction alloc] initWithSignalBlock:^(NSNumber *input) {
+                return [RACSignal return:input];
+            }];
+        });
+
+        it(@"should deallocate values after they are sent", ^{
+            RACSignal *willDealloc;
+
+            @autoreleasepool{
+                NSError *error;
+                NSObject *value = [[NSObject alloc] init];
+                willDealloc = value.rac_willDeallocSignal;
+
+                BOOL success = [[action execute:value] asynchronouslyWaitUntilCompleted:&error];
+                expect(success).to.beTruthy();
+                expect(error).to.beNil();
+            }
+
+            expect([willDealloc asynchronouslyWaitUntilCompleted:NULL]).to.beTruthy();
+        });
+    });
 });
 
 describe(@"-act_latestExecution", ^{
@@ -99,8 +123,11 @@ describe(@"-act_latestExecution", ^{
     });
 
     it(@"should replay last execution", ^{
+        // The latest execution is replayed starting when it is first invoked.
+        RACSignal *latestExecution = action.act_latestExecution;
+
         expect([[action execute:@2] asynchronouslyWaitUntilCompleted:NULL]).to.beTruthy();
-        expect([action.act_latestExecution toArray]).to.equal((@[ @2, @4 ]));
+        expect([latestExecution toArray]).to.equal((@[ @2, @4 ]));
     });
 });
 
