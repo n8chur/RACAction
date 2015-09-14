@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AEB4ADD1BA74D6F00299462 /* RACCommand+RACAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AEB4ADB1BA74D6F00299462 /* RACCommand+RACAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AEB4ADE1BA74D6F00299462 /* RACCommand+RACAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AEB4ADB1BA74D6F00299462 /* RACCommand+RACAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AEB4ADF1BA74D6F00299462 /* RACCommand+RACAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB4ADC1BA74D6F00299462 /* RACCommand+RACAction.m */; };
+		3AEB4AE01BA74D6F00299462 /* RACCommand+RACAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB4ADC1BA74D6F00299462 /* RACCommand+RACAction.m */; };
 		D09B0B581B0E66C700AC15A1 /* RACAction.h in Headers */ = {isa = PBXBuildFile; fileRef = D09B0B571B0E66C700AC15A1 /* RACAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D09B0B5E1B0E66C700AC15A1 /* RACAction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0B521B0E66C700AC15A1 /* RACAction.framework */; };
 		D09B0B7E1B0E66FF00AC15A1 /* RACAction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0B731B0E66FF00AC15A1 /* RACAction.framework */; };
@@ -15,8 +19,6 @@
 		D09B0BAF1B0E685500AC15A1 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BAE1B0E685500AC15A1 /* ReactiveCocoa.framework */; };
 		D09B0BB11B0E689800AC15A1 /* ReactiveCocoa.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BAC1B0E684B00AC15A1 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D09B0BB31B0E68E000AC15A1 /* ReactiveCocoa.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BAE1B0E685500AC15A1 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D09B0BB81B0E725C00AC15A1 /* RACAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D09B0BB51B0E725C00AC15A1 /* RACAction.m */; };
-		D09B0BB91B0E725C00AC15A1 /* RACAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D09B0BB51B0E725C00AC15A1 /* RACAction.m */; };
 		D09B0BBC1B0E73EF00AC15A1 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BBA1B0E73EF00AC15A1 /* Expecta.framework */; };
 		D09B0BBD1B0E73EF00AC15A1 /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BBB1B0E73EF00AC15A1 /* Specta.framework */; };
 		D09B0BC01B0E73F800AC15A1 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09B0BBE1B0E73F800AC15A1 /* Expecta.framework */; };
@@ -76,6 +78,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3AEB4ADB1BA74D6F00299462 /* RACCommand+RACAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACCommand+RACAction.h"; sourceTree = "<group>"; };
+		3AEB4ADC1BA74D6F00299462 /* RACCommand+RACAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACCommand+RACAction.m"; sourceTree = "<group>"; };
 		D09B0B521B0E66C700AC15A1 /* RACAction.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RACAction.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09B0B561B0E66C700AC15A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D09B0B571B0E66C700AC15A1 /* RACAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACAction.h; sourceTree = "<group>"; };
@@ -105,7 +109,6 @@
 		D09B0BA91B0E676C00AC15A1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D09B0BAC1B0E684B00AC15A1 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = SOURCE_ROOT; };
 		D09B0BAE1B0E685500AC15A1 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/Mac/ReactiveCocoa.framework; sourceTree = SOURCE_ROOT; };
-		D09B0BB51B0E725C00AC15A1 /* RACAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACAction.m; sourceTree = "<group>"; };
 		D09B0BBA1B0E73EF00AC15A1 /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/iOS/Expecta.framework; sourceTree = SOURCE_ROOT; };
 		D09B0BBB1B0E73EF00AC15A1 /* Specta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Specta.framework; path = Carthage/Build/iOS/Specta.framework; sourceTree = SOURCE_ROOT; };
 		D09B0BBE1B0E73F800AC15A1 /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/Mac/Expecta.framework; sourceTree = SOURCE_ROOT; };
@@ -178,7 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				D09B0B571B0E66C700AC15A1 /* RACAction.h */,
-				D09B0BB51B0E725C00AC15A1 /* RACAction.m */,
+				3AEB4ADB1BA74D6F00299462 /* RACCommand+RACAction.h */,
+				3AEB4ADC1BA74D6F00299462 /* RACCommand+RACAction.m */,
 				D09B0B551B0E66C700AC15A1 /* Supporting Files */,
 			);
 			path = RACAction;
@@ -322,6 +326,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AEB4ADD1BA74D6F00299462 /* RACCommand+RACAction.h in Headers */,
 				D09B0B581B0E66C700AC15A1 /* RACAction.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +335,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AEB4ADE1BA74D6F00299462 /* RACCommand+RACAction.h in Headers */,
 				D09B0BAA1B0E681600AC15A1 /* RACAction.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,7 +496,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D09B0BB81B0E725C00AC15A1 /* RACAction.m in Sources */,
+				3AEB4ADF1BA74D6F00299462 /* RACCommand+RACAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,7 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D09B0BB91B0E725C00AC15A1 /* RACAction.m in Sources */,
+				3AEB4AE01BA74D6F00299462 /* RACCommand+RACAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

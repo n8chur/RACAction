@@ -13,14 +13,14 @@
 
 SpecBegin(RACAction)
 
-__block RACAction *action;
+__block RACCommand *command;
 __block BOOL shouldError;
 
 NSError *testError = [NSError errorWithDomain:@"com.automatic.RACAction" code:1 userInfo:nil];
 
 beforeEach(^{
     shouldError = NO;
-    action = [[RACAction alloc] initWithSignalBlock:^(NSNumber *input) {
+    command = [[RACCommand alloc] initWithSignalBlock:^(NSNumber *input) {
         if (shouldError) {
             return [RACSignal error:testError];
         }
@@ -31,7 +31,7 @@ beforeEach(^{
             startWith:input];
     }];
 
-    expect(action).notTo.beNil();
+    expect(command).notTo.beNil();
 });
 
 describe(@"-act_executions", ^{
@@ -39,13 +39,13 @@ describe(@"-act_executions", ^{
 
     beforeEach(^{
         execution = nil;
-        [action.act_executions subscribeNext:^(RACSignal *signal) {
+        [command.act_executions subscribeNext:^(RACSignal *signal) {
             execution = signal;
         }];
     });
 
     it(@"should send execution signals", ^{
-        expect([[action execute:@1] asynchronouslyWaitUntilCompleted:NULL]).to.beTruthy();
+        expect([[command execute:@1] asynchronouslyWaitUntilCompleted:NULL]).to.beTruthy();
 
         expect(execution).notTo.beNil();
         expect([execution toArray]).to.equal((@[ @1, @2 ]));
@@ -55,7 +55,7 @@ describe(@"-act_executions", ^{
         shouldError = YES;
 
         __block NSError *error = nil;
-        expect([[action execute:@1] asynchronouslyWaitUntilCompleted:&error]).to.beFalsy();
+        expect([[command execute:@1] asynchronouslyWaitUntilCompleted:&error]).to.beFalsy();
         expect(error).to.equal(testError);
 
         expect(execution).notTo.beNil();
@@ -67,17 +67,17 @@ describe(@"-act_executions", ^{
 describe(@"-act_values", ^{
     it(@"should send values as they occur", ^{
         NSMutableArray *values = [NSMutableArray array];
-        [action.act_values subscribeNext:^(id value) {
+        [command.act_values subscribeNext:^(id value) {
             [values addObject:value];
         }];
 
-        expect([[action execute:@2] asynchronouslyWaitUntilCompleted:NULL]).to.beTruthy();
+        expect([[command execute:@2] asynchronouslyWaitUntilCompleted:NULL]).to.beTruthy();
         expect(values).to.equal((@[ @2, @4 ]));
     });
 
     describe(@"disposal", ^{
         beforeEach(^{
-            action = [[RACAction alloc] initWithSignalBlock:^(NSNumber *input) {
+            command = [[RACCommand alloc] initWithSignalBlock:^(NSNumber *input) {
                 return [RACSignal return:input];
             }];
         });
@@ -90,7 +90,7 @@ describe(@"-act_values", ^{
                 NSObject *value = [[NSObject alloc] init];
                 willDealloc = value.rac_willDeallocSignal;
 
-                BOOL success = [[action execute:value] asynchronouslyWaitUntilCompleted:&error];
+                BOOL success = [[command execute:value] asynchronouslyWaitUntilCompleted:&error];
                 expect(success).to.beTruthy();
                 expect(error).to.beNil();
             }
@@ -103,30 +103,30 @@ describe(@"-act_values", ^{
 describe(@"-act_latestExecution", ^{
     it(@"should forward next execution", ^{
         NSMutableArray *values = [NSMutableArray array];
-        [action.act_latestExecution subscribeNext:^(id value) {
+        [command.act_latestExecution subscribeNext:^(id value) {
             [values addObject:value];
         }];
         
-        expect([[action execute:@2] asynchronouslyWaitUntilCompleted:NULL]).to.beTruthy();
+        expect([[command execute:@2] asynchronouslyWaitUntilCompleted:NULL]).to.beTruthy();
         expect(values).to.equal((@[ @2, @4 ]));
     });
 
     it(@"should send errors from execution", ^{
         __block NSError *receivedError = nil;
-        [action.act_latestExecution subscribeError:^(NSError *error) {
+        [command.act_latestExecution subscribeError:^(NSError *error) {
             receivedError = error;
         }];
         
         shouldError = YES;
-        expect([[action execute:@2] asynchronouslyWaitUntilCompleted:NULL]).to.beFalsy();
+        expect([[command execute:@2] asynchronouslyWaitUntilCompleted:NULL]).to.beFalsy();
         expect(receivedError).to.equal(testError);
     });
 
     it(@"should replay last execution", ^{
         // The latest execution is replayed starting when it is first invoked.
-        RACSignal *latestExecution = action.act_latestExecution;
+        RACSignal *latestExecution = command.act_latestExecution;
 
-        expect([[action execute:@2] asynchronouslyWaitUntilCompleted:NULL]).to.beTruthy();
+        expect([[command execute:@2] asynchronouslyWaitUntilCompleted:NULL]).to.beTruthy();
         expect([latestExecution toArray]).to.equal((@[ @2, @4 ]));
     });
 });
