@@ -39,12 +39,12 @@
         setNameWithFormat:@"%@ -act_values", self];
 }
 
-- (RACSignal *)act_latestExecution {
+- (RACSignal *)act_nextExecution {
     return [[[[self.act_executions
         replayLast]
         take:1]
         flatten]
-        setNameWithFormat:@"%@ -act_latestExecution", self];
+        setNameWithFormat:@"%@ -act_nextExecution", self];
 }
 
 @end

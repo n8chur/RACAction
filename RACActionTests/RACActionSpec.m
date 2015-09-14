@@ -100,10 +100,10 @@ describe(@"-act_values", ^{
     });
 });
 
-describe(@"-act_latestExecution", ^{
+describe(@"-act_nextExecution", ^{
     it(@"should forward next execution", ^{
         NSMutableArray *values = [NSMutableArray array];
-        [command.act_latestExecution subscribeNext:^(id value) {
+        [command.act_nextExecution subscribeNext:^(id value) {
             [values addObject:value];
         }];
         
@@ -113,7 +113,7 @@ describe(@"-act_latestExecution", ^{
 
     it(@"should send errors from execution", ^{
         __block NSError *receivedError = nil;
-        [command.act_latestExecution subscribeError:^(NSError *error) {
+        [command.act_nextExecution subscribeError:^(NSError *error) {
             receivedError = error;
         }];
         
@@ -124,7 +124,7 @@ describe(@"-act_latestExecution", ^{
 
     it(@"should replay last execution", ^{
         // The latest execution is replayed starting when it is first invoked.
-        RACSignal *latestExecution = command.act_latestExecution;
+        RACSignal *latestExecution = command.act_nextExecution;
 
         expect([[command execute:@2] asynchronouslyWaitUntilCompleted:NULL]).to.beTruthy();
         expect([latestExecution toArray]).to.equal((@[ @2, @4 ]));

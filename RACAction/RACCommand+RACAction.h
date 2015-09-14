@@ -36,6 +36,6 @@
 /// executions following the invocation of this getter, then forward any future
 /// events, or else the previous execution if the action is not currently
 /// executing.
-@property (nonatomic, strong, readonly) RACSignal *act_latestExecution;
+@property (nonatomic, strong, readonly) RACSignal *act_nextExecution;
 
 @end
